@@ -1,9 +1,9 @@
 # Ranked Retrieval Model 🔍
-🌐 **Try the live demo**: https://ranked-retrieval-model.streamlit.app/
+**Try the live demo**: https://ranked-retrieval-model.streamlit.app/
 
 A comprehensive information retrieval system built with Python that implements advanced text processing, indexing, and ranking algorithms for efficient document search and retrieval.
 
-## 🌟 Features
+## Features
 
 ### Core Functionality
 - **Text Preprocessing Pipeline**: Complete tokenization, stopword removal, and Porter stemming
@@ -19,7 +19,7 @@ A comprehensive information retrieval system built with Python that implements a
 - **Interactive Document Links**: Results display clickable links directly to source documents for immediate access
 
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
@@ -32,7 +32,7 @@ A comprehensive information retrieval system built with Python that implements a
 └─────────────────┘    └──────────────────┘    └─────────────────┘
 ```
 
-## 📋 Requirements
+## Requirements
 
 ### Dependencies
 ```
@@ -44,7 +44,7 @@ pyspellchecker==0.8.3
 ### Python Version
 - Python 3.7 or higher
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 1. **Clone the repository**:
    ```bash
@@ -69,27 +69,29 @@ pyspellchecker==0.8.3
    - Create a `Corpus` folder in the project directory
    - Add your `.txt` files to the corpus folder
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ranked-retrieval-model/
 │
 ├── pipeline.ipynb              # Main implementation notebook
-├── doc_lengths.json           # Precomputed document vector lengths
-├── inverted_index.json        # Serialized inverted index
-├── inverted_index.pkl         # Binary index (more efficient)
-├── Corpus/                    # Document collection
+├── search.py                   # Streamlit UI for search
+├── doc_lengths.json            # Precomputed document vector lengths
+├── inverted_index.json         # Serialized inverted index
+├── inverted_index.pkl          # Binary index (more efficient)
+├── Corpus/                     # Document collection
 │   ├── Adobe.txt
 │   ├── Amazon.txt
 │   ├── apple.txt
 │   └── ... (other documents)
-└── README.md                  # This file
+└── README.md                   # Project overview
+
 ```
 
-## 🎯 How to Run
+## How to Run
 
 ### Option 1: Web Interface (Recommended)
-🌐 **Try the live demo**:(https://ranked-retrieval-model.streamlit.app/)
+**Try the live demo**:(https://ranked-retrieval-model.streamlit.app/)
 
 ### Option 2: Jupyter Notebook
 1. Launch Jupyter Notebook:
@@ -116,7 +118,7 @@ python search_engine.py
    - The system will show spell-corrected query
    - View ranked results with similarity scores
 
-## 💡 Usage Examples
+## Usage Examples
 
 ### Basic Search
 ```
@@ -133,7 +135,7 @@ Corrected query: environment protection
 [Discord.txt](corpus/Discord.txt) — Score: 0.0379
 ```
 
-## 🔧 Technical Details
+## Technical Details
 
 ### Text Processing Pipeline
 1. **Tokenization**: NLTK word tokenization
@@ -152,14 +154,14 @@ Corrected query: environment protection
 2. PySpellChecker for common corrections
 3. Levenshtein distance fallback for domain-specific terms
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 - **Index Size**: ~840KB (JSON), ~160KB (Pickle)
 - **Corpus Size**: 41 documents processed
 - **Search Latency**: Sub-second query processing
 - **Memory Efficiency**: Optimized data structures for large corpora
 
-## 🔍 Advanced Features
+## Advanced Features
 
 ### Customization Options
 - **Modify stemming**: Replace PorterStemmer with other algorithms
